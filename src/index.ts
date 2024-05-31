@@ -2,7 +2,7 @@ import { Elysia } from "elysia";
 
 const app = new Elysia();
 
-app.get("/", () => "Hello Elysia");
+app.get("/", () => "Hello Elysia").get("/json", () => ({ hello: "world" }));
 
 app.listen(3000);
 
